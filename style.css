@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #745ab2;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+  background-color: transparent;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/* Geral */
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 30px;
+  gap: 30px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.4px solid black;
+  text-transform: uppercase;
+}
+
+.title:nth-child(1) {
+  padding: 5px 20px;
+}
+
+
+/* Titulo */
+
+
+.box_division {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 5px;
+  flex: 1;
+  background-color: #947EC3;
+  border-radius: 14px;
+}
+
+/* Caixas */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Done_Item,
+.createNewItem {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  transform: translateY(-40px);
+  transition: 400ms;
+}
+
+.Done_Item.active,
+.createNewItem.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.Done_Item input,
+.createNewItem input {
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid pink;
+}
+
+.Done_Item button,
+.createNewItem button {
+  height: 20px;
+  margin-left: -40px;
+  background: transparent;
+  border: none;
+}
+
+/* Criar nova elemento para fazer */
+
+.newElement {
+  font-size: 20px;
+  border-bottom: 1px solid pink;
+  margin-bottom: 5px;
+  padding: 10px;
+}
