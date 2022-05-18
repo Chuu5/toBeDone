@@ -45,6 +45,7 @@ doneButton.addEventListener("click", openDone)
 
 function openToBeDone() {
     createNewItem.classList.toggle("active")
+    input.value = ""
 }
 
 
@@ -54,6 +55,7 @@ function newItems() {
     if(input.value != "") {
         toBeDone.innerHTML = `<p>${input.value}</p> <button><img src='assets/images/close.png'></button>`
         listElement.append(toBeDone)
+        input.value = ""
     }
 
     function remove () {
@@ -67,6 +69,7 @@ function newItems() {
 
 function openDone() {
     doneItem.classList.toggle("active")
+    inputDone.value = ""
 }
 
 function newDoneItems() {
@@ -76,6 +79,7 @@ function newDoneItems() {
     if (inputDone.value != "") {
         toBeDone.innerHTML = `<p>${inputDone.value}</p> <button><img src='assets/images/close.png'></button>`
         content.append(toBeDone)
+        inputDone.value = ""
     }
 
     function remove () {
